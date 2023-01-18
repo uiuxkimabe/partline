@@ -413,10 +413,6 @@ nav {
 
 /* contact */
 
-#contact {
-   height: 450px;
-}
-
 #contact p {
    color: var(--basic);
 }
@@ -426,7 +422,7 @@ nav {
 }
 
 #contact .row .col {
-   height: 100%;
+   height: 450px;
    flex: 1 1 300px;
    font-family: var(--general-sans);
    padding: 2em;
@@ -468,6 +464,14 @@ footer p {
 
 @media screen and (max-width: 850px) {
 
+   /* nav */
+
+   nav .socmed {
+      width: 20%;
+   }
+
+   /* end nav */
+
    /* jumbotron */
    
    #jumbotron .row {
@@ -508,6 +512,14 @@ footer p {
 /* responsive */
 /* smartphone view */
 @media screen and (max-width: 550px) {
+
+   /* nav */
+
+   nav .socmed {
+      width: 40%;
+   }
+
+   /* end nav */
 
    /* jumbotron */
 
@@ -554,9 +566,16 @@ footer p {
    /* end about */
 
    /* footer */
-   
+
    footer {
+      background-color: var(--basic) !important;
+      text-align: center;
+      padding: 1em 0;
       font-size: smaller;
+   }
+
+   footer p {
+      color: var(--dark);
    }
 
    /* end footer */
