@@ -7,6 +7,10 @@
    text-decoration: none;
 }
 
+html, body {
+   scroll-behavior: smooth;
+}
+
 :root {
    /* font family */
    --clash-display: 'Clash Display', sans-serif;
@@ -20,6 +24,7 @@
 }
 
 h1,h2,h3,h4,h5,h6 {
+   font-weight: 500;
    font-family: var(--clash-display);
 }
 
@@ -32,6 +37,14 @@ p {
 a {
    font-family: var(--general-sans);
    font-weight: 500;
+}
+
+hr {
+   width: 150px;
+   height: 4px;
+   background-color: var(--main);
+   border: none;
+   margin: 1em 0;
 }
 
 .container {
@@ -264,12 +277,190 @@ nav {
    width: 40px;
 }
 
+.hero {
+   color: var(--basic);
+   height: 250px;
+   background-color: #4158D0;
+   background-image: linear-gradient(66deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 59%, rgb(249, 255, 53) 100%);
+   background-position: right;
+   background-size: 200%;
+   animation: toR 5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes toR {
+   to {
+      background-position: left;
+      background-size: 150%;
+   }
+}
+
+.hero p {
+   color: var(--basic);
+}
+
+.hero .breadcumb {
+   margin: 2em 0;
+}
+
 /* end jumbotron */
+
+/* product */
+
+#product {
+   padding: 2em 0;
+}
+
+#product .row {
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 1em;
+}
+
+#product .card button {
+   align-self: flex-end;
+   padding: 10px 2em;
+   border: none;
+   background-color: var(--dark);
+   color: var(--basic);
+   border-radius: 5px;
+}
+
+#product  .card-img {
+   display: block;
+   height: 200px;
+}
+
+#product .card:first-child .card-img {
+   background: url('https://images.unsplash.com/photo-1635594202056-9ea3b497e5c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80') no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+#product .card:nth-child(2) .card-img {
+   background: url('https://images.unsplash.com/photo-1599225745889-5697ac8ed5d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80') no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+#product .card:nth-child(3) .card-img {
+   background: url('https://images.unsplash.com/flagged/photo-1571600463906-d18aed112195?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=445&q=80') no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+#product .card .price {
+   padding: 10px 1em;
+   border-radius: 0 0 10px 10px;
+   background-color: var(--basic);
+}
+
+
+.detail-card {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   width: 100%;
+   transform: translateY(100%);
+   transition: .3s ease-in-out;
+   background-color: rgba(29, 29, 29, .8);
+   justify-content: center;
+}
+
+.detail-card.popUp {
+   transform: translateY(0);
+}
+
+.detail-card figure {
+   max-width: 50%;
+   background-color: var(--basic);
+   padding: 1em;
+   position: absolute;
+   visibility: hidden;
+   transform: scale(0);
+   transition: .3s ease-in-out .2s;
+}
+
+.detail-card figure:first-child.popUp {
+   transform: scale(1);
+   visibility: visible;
+}
+
+.detail-card figure:nth-child(2).popUp  {
+   transform: scale(1);
+   visibility: visible;
+}
+
+.detail-card figure:last-child.popUp  {
+   transform: scale(1);
+   visibility: visible;
+}
+
+.detail-card .spec {
+   flex-wrap: wrap;
+   gap: 1em;
+}
+
+.detail-card ul {
+   margin: 1em 0;
+   justify-content: space-evenly;
+   gap: 1em;
+   flex-wrap: wrap;
+}
+
+.detail-card ul li {
+   padding: 1em;
+   background-color: #d4d4d4;
+   font-size: smaller;
+   border-radius: 5px;
+}
+
+.detail-card ul li svg {
+   margin: 8px 0;
+}
+
+.detail-card span {
+   display: block;
+   height: 150px;
+   margin-bottom: 1em;
+}
+
+#extrabed span {
+   background: url('https://images.unsplash.com/photo-1635594202056-9ea3b497e5c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80') no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+#cuttleries span {
+   background: url('https://images.unsplash.com/photo-1592065849768-c899a42f8088?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80') no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+#towel span {
+   background: url('https://images.unsplash.com/photo-1639298109207-5a9ccc254481?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.detail-card .spec .col {
+   flex: 1 1 300px;
+}
+
+.detail-card .order {
+   display: inline-block;
+   padding: .8em 1em;
+   margin: 1em 0;
+   background-color: var(--dark);
+   color: var(--basic);
+}
+
+
+/* product */
 
 /* about */
 
 #about {
-   padding: 2em 0;
+   padding: 2em 0 0 0;
 }
 
 #about h1 {
@@ -279,6 +470,12 @@ nav {
 #about .row {
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
    gap: 1.5em;
+}
+
+#about .highlight {
+   padding: 2em 0;
+   border-top: 2px solid var(--secondary);
+   border-bottom: 2px solid var(--secondary);
 }
 
 #about .row .col {
@@ -392,10 +589,10 @@ nav {
    height: 400px;
    background: linear-gradient(to right, rgb(0 0 0 / .8), rgb(0 0 0 / 0)), url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') no-repeat fixed;
    background-size: cover;
-   background-position: bottom right;
+   background-position: top right;
    color: var(--basic);
    padding: 2em;
-   /* box-shadow: 6px 6px #df1d78; */
+   margin: 2em 0 0 0;
 }
 
 #about .affiliate figcaption p {
@@ -412,6 +609,10 @@ nav {
 /* end about */
 
 /* contact */
+
+#contact {
+   margin-top: 2em;
+}
 
 #contact p {
    color: var(--basic);
@@ -491,6 +692,14 @@ footer p {
 
    /* end jumbotron */
 
+   /* product */
+
+   .detail-card figure {
+      max-width: 80%;
+   }
+
+   /* end product */
+
    /* contact */
 
    #contact .row {
@@ -558,12 +767,23 @@ footer p {
       flex: 1 1 1;
       width: 120px;
       height: 120px;
-      border: 1px solid black;
       border-radius: 50%;
       justify-content: center;
    }
 
    /* end about */
+
+   /* product */
+
+   #product {
+      font-size: smaller;
+   }
+
+   .detail-card figure {
+      max-width: 90%;
+   }
+
+   /* end product */
 
    /* footer */
 
