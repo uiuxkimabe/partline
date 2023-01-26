@@ -74,8 +74,8 @@ bgDetail.addEventListener('click', ()=> {
 // FAQ Button
 const headRules = document.querySelectorAll('.head-rules');
 const faqSummary = document.querySelectorAll('#faq figcaption summary');
-const [ask1, ask2, ask3,ask4, ask5, ask6,ask7,ask8,ask9,ask10] = headRules;
-const [ans1, ans2, ans3,ans4, ans5, ans6, ans7, ans8, ans9, ans10] = faqSummary;
+const [ask1, ask2, ask3,ask4, ask5, ask6,ask7] = headRules;
+const [ans1, ans2, ans3,ans4, ans5, ans6, ans7] = faqSummary;
 
 ask1.addEventListener('click', ()=> {
    ans1.classList.toggle('popUp')
