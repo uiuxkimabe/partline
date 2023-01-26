@@ -608,6 +608,62 @@ nav {
 
 /* end about */
 
+/* FAQ*/
+
+#faq {
+   padding: 3em 0;
+   transition: all .3s ease-in-out;
+}
+
+#faq h1 {
+   margin: 1em 0;
+}
+
+#faq .row {
+   grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+   gap: 2em;
+}
+
+#faq .head-rules {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border: 1px solid var(--dark);
+   padding: 10px;
+   transition: all .3s ease-in-out;
+   cursor: pointer;
+}
+
+#faq figcaption {
+   margin: 1em 0;
+}
+
+#faq figcaption summary {
+   height: 0;
+   overflow: hidden;
+   padding: 0 1em;
+   opacity: 0;
+   border-bottom: 1px dotted var(--main);
+   transition: all .3s ease-in-out;
+   font-family: var(--general-sans);
+}
+
+#faq figcaptio summary ul {
+   list-style: circle !important;
+}
+
+#faq figcaption summary.popUp {
+   height: auto;
+   padding: 1em;
+   opacity: 1;
+}
+
+
+/* End FAQ */
+
+
+
+
 /* contact */
 
 #contact {
@@ -784,6 +840,14 @@ footer p {
    }
 
    /* end product */
+
+   /* faq */
+
+   #faq {
+      font-size: smaller;
+   }
+
+   /* end faq */
 
    /* footer */
 

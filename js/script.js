@@ -7,7 +7,6 @@ hamBtn.addEventListener('click', ()=> {
 
 // Detail Product
 const cardBtn = document.querySelectorAll('.card button');
-console.info(cardBtn)
 
 // OOP Modals
 class Modal {
@@ -69,4 +68,51 @@ bgDetail.addEventListener('click', ()=> {
    setTimeout(() => {
       bgDetail.classList.remove('popUp');
    }, 500);
+})
+
+
+// FAQ Button
+const headRules = document.querySelectorAll('.head-rules');
+const faqSummary = document.querySelectorAll('#faq figcaption summary');
+const [ask1, ask2, ask3,ask4, ask5, ask6,ask7,ask8,ask9,ask10] = headRules;
+const [ans1, ans2, ans3,ans4, ans5, ans6, ans7, ans8, ans9, ans10] = faqSummary;
+
+ask1.addEventListener('click', ()=> {
+   ans1.classList.toggle('popUp')
+})
+
+ask2.addEventListener('click', ()=> {
+   ans2.classList.toggle('popUp')
+})
+
+ask3.addEventListener('click', ()=> {
+   ans3.classList.toggle('popUp')
+})
+
+ask4.addEventListener('click', ()=> {
+   ans4.classList.toggle('popUp')
+})
+
+ask5.addEventListener('click', ()=> {
+   ans5.classList.toggle('popUp')
+})
+
+ask6.addEventListener('click', ()=> {
+   ans6.classList.toggle('popUp')
+})
+
+ask7.addEventListener('click', ()=> {
+   ans7.classList.toggle('popUp')
+})
+
+ask8.addEventListener('click', ()=> {
+   ans8.classList.toggle('popUp')
+})
+
+ask9.addEventListener('click', ()=> {
+   ans9.classList.toggle('popUp')
+})
+
+ask10.addEventListener('click', ()=> {
+   ans10.classList.toggle('popUp')
 })
