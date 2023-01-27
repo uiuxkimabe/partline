@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Order | Part Line</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet">
+   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,500,300,600,400,700&display=swap" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/185a3acc44.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+<!-- nav -->
+
+<nav>
+   <div class="row d-flex bg-light">
+      <div class="col logo">
+         <a href="index.html">Part Line</a>
+      </div>
+      <div class="col socmed d-flex">
+         <a href="#" title="Ig Part Line"><i class="fa-brands fa-instagram"></i></a>
+         <a href="#" title="WhatsApp Part Line"><i class="fa-brands fa-whatsapp"></i></a>
+         <a href="#" title="Youtube Part Line"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="col hamBtn d-flex">
+         <input type="checkbox">
+         <span></span>
+         <span></span>
+         <span></span>
+      </div>
+      <div class="col navigasi">
+         <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="product.html" class="active">Produk | Layanan</a></li>
+            <li><a href="order.html">Pesan</a></li>
+         </ul>
+      </div>
+   </div>
+</nav>
+
+<!-- end nav   -->
+
+<!-- jumbotron -->
+   
+<section id="jumbotron" class="hero">
+   <div class="container d-flex bg-dark">
+      <figcaption>
+         <h1>Pesan Produk & Layanan</h1>
+         <p>Isi form pemesanan dan segera kami proses</p>
+         <p class="breadcumb"><a href="index.html">Beranda</a> | Pesan</p>
+      </figcaption>
+   </div>
+</section>
+
+<!-- end jumbotron -->
+
+<!-- order-form -->
+
+<section id="order-form">
+   <div class="container">
+      <div class="row d-flex">
+         <form name="submit-to-google-sheet" class="d-flex">
+            <input name="name" type="text" placeholder="Contoh : John Carter" required>
+            <input name="email" type="email" placeholder="john@example.com" required>
+            <div class="side-by-side d-grid">
+               <input name="phone" type="tel" placeholder="Contoh : 08123456789">
+               <input name="date-used" type="date" required>
+            </div>
+            <div class="side-by-side d-grid">
+               <select id="selectMenu" name="selectMenu">
+                  <option value="option1" selected>Extra Bed</option>
+                  <option value="option2">Cuttleries</option>
+                  <option value="option3">Towel</option>
+               </select>
+               <input name="qty" type="number" value="50">
+            </div>
+            <textarea name="address" rows="10" placeholder="Contoh : Jl. Raya Puncak, Km. 79. (Grand Ussu)"></textarea>
+            <button type="submit">Send</button>
+         </form>
+      </div>
+   </div>
+</section>
+
+<!-- end order-form -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- footer -->
+
+ <footer>
+   <div class="container">
+      <div class="row">
+         <figcaption>
+            <p>Copyright © 2023. Kiki Afrianto Brata</p>
+         </figcaption>
+      </div>
+   </div>
+</footer>
+
+<!-- end footer -->
+
+
+
+
+
+
+
+ <!-- vanilla javascript -->
+ <script src="js/script.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

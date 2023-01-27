@@ -658,8 +658,46 @@ nav {
    opacity: 1;
 }
 
-
 /* End FAQ */
+
+/* order-form */
+
+#order-form {
+   padding: 3em 0;
+   /* transform: translateY(-100px); */
+}
+
+#order-form .container {
+   border-radius: 10px 10px 0 0;
+   padding: 3em 1em;
+   background-color: var(--basic);
+}
+
+#order-form .row {
+   justify-content: center;
+}
+
+#order-form form {
+   flex-direction: column;
+   gap: 1em;
+   justify-content: space-evenly;
+   width: 80%;
+}
+
+#order-form input, select, textarea, button {
+   padding: 1em;
+   width: 100%;
+}
+
+.side-by-side {
+   width: 100%;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 1em;
+}
+
+
+
+/* end order-form */
 
 
 
