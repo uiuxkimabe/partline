@@ -62,10 +62,16 @@
    <div class="container">
       <div class="row d-flex">
          <form name="submit-to-google-sheet" class="d-flex">
-            <label for="name">Nama Lengkap</label>
-            <input name="name" type="text" placeholder="Contoh : John Carter" required>
-            <label for="email">Alamat Email</label>
-            <input name="email" type="email" placeholder="john@example.com" required>
+            <div class="side-by-side d-grid">
+               <div class="col">
+                  <label for="name">Nama Lengkap</label>
+                  <input name="name" type="text" placeholder="Contoh : John Carter" required>
+               </div>
+               <div class="col">
+                  <label for="email">Alamat Email</label>
+                  <input name="email" type="email" placeholder="john@example.com" required>
+               </div>
+            </div>
             <div class="side-by-side d-grid">
                <div class="col">
                   <label for="phone">No. Telepon</label>
@@ -116,6 +122,20 @@
 
  <!-- vanilla javascript -->
  <script src="js/script.js"></script>
+
+ <!-- script submit form -->
+ 
+ <script>
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbxUkVQ88iJJSI9pvtgoaWTo57egiAKnSRFU74Y6kPVYTOBPNAGf_SO7p4gJlg4rpzr43w/exec'
+   const form = document.forms['submit-to-google-sheet']
+ 
+   form.addEventListener('submit', e => {
+     e.preventDefault()
+     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+       .then(response => console.log('Success!', response))
+       .catch(error => console.error('Error!', error.message))
+   })
+ </script>
 
 
 </body>
