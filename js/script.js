@@ -29,7 +29,7 @@ const bgDetail = document.querySelector('.detail-card')
 const extrabed = document.querySelector('.detail-card figure:first-child')
 const popExtraBed = new Modal(bgDetail,extrabed);
 popExtraBed.background = bgDetail;
-popExtraBed.content = extrabed
+popExtraBed.content = extrabed;
 cardBtn[0].addEventListener('click', ()=> {
    popExtraBed.popUp()
 })
@@ -105,14 +105,4 @@ ask7.addEventListener('click', ()=> {
    ans7.classList.toggle('popUp')
 })
 
-ask8.addEventListener('click', ()=> {
-   ans8.classList.toggle('popUp')
-})
 
-ask9.addEventListener('click', ()=> {
-   ans9.classList.toggle('popUp')
-})
-
-ask10.addEventListener('click', ()=> {
-   ans10.classList.toggle('popUp')
-})

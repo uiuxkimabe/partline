@@ -648,7 +648,7 @@ nav {
    font-family: var(--general-sans);
 }
 
-#faq figcaptio summary ul {
+#faq figcaption summary ul {
    list-style: circle !important;
 }
 
@@ -684,8 +684,14 @@ nav {
    width: 80%;
 }
 
-#order-form input, select, textarea, button {
+#order-form form label {
+   margin-right: auto;
+   font-family: var(--general-sans);
+}
+
+#order-form input, select, textarea, .send {
    padding: 1em;
+   margin: 5px 0;
    width: 100%;
 }
 
